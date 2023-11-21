@@ -21,7 +21,7 @@ pub fn mkl_libs(cfg: Config) -> Vec<String> {
     };
     match cfg.parallel {
         Threading::OpenMP => {
-            libs.push("mkl_intel_thread".into());
+            libs.push("mkl_gnu_thread".into());
         }
         Threading::Sequential => {
             libs.push("mkl_sequential".into());
